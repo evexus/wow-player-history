@@ -88,7 +88,7 @@ function App() {
       {error && <p>{error}</p>}
       
       {/*Player data will be set to null if it doesnt exist - Not just dumped as JSON - frontend interpreting and processing it*/}
-      {playerData && (
+      {/* {playerData && (
         <div>
           <h2>{playerData.name}</h2>
 
@@ -104,6 +104,12 @@ function App() {
 
           <p>Achievement Points: {playerData.achievement_points}</p>
         </div>
+      )} */}
+
+      {playerData && (
+        <pre>
+          {JSON.stringify(playerData, null, 2)}
+        </pre>
       )}
     </div>
   );

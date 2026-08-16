@@ -38,7 +38,7 @@ app.get("/api/player/:region/:realm/:name", async (req, res) => {
     // Build the Raider.IO API URL using the character information
     // that came from our own URL.
     const url =
-        `https://raider.io/api/v1/characters/profile?region=${region}&realm=${realm}&name=${name}&fields=mythic_plus_scores_by_season:current`;
+        `https://raider.io/api/v1/characters/profile?region=${region}&realm=${realm}&name=${name}&fields=mythic_plus_recent_runs`;
 
     // Try running code but if theres an error, send status and do not return data
     try {
